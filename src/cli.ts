@@ -1,6 +1,7 @@
 import minimist from 'minimist'
 import build from '.'
 import help from './help'
+import getVersion from './getVersion'
 
 export const run = (args: string[]) => {
   const argv = minimist(args, {
@@ -10,7 +11,7 @@ export const run = (args: string[]) => {
   })
 
   argv.version !== undefined
-    ? console.log(`v${require('../package.json').version}`)
+    ? console.log(getVersion())
     : argv.help
     ? console.log(help())
     : argv.input
