@@ -1,5 +1,7 @@
 const help = () => {
   return `
+  Version : ${JSON.stringify(require('../package.json').version)}
+
   Usage:
     npx openapi2aspida [options] [command]
 
