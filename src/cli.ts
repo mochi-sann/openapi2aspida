@@ -1,5 +1,6 @@
 import minimist from 'minimist'
 import build from '.'
+import help from './help'
 
 export const run = (args: string[]) => {
   const argv = minimist(args, {
@@ -12,7 +13,7 @@ export const run = (args: string[]) => {
   argv.version !== undefined
     ? console.log(`v${require('../package.json').version}`)
     : argv.help
-    ? console.log('helpを表示するところです')
+    ? console.log(help())
     : argv.input
     ? build({ outputEachDir: true, openapi: { inputFile: argv.input } })
     : build(argv.config)
