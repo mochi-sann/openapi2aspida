@@ -11,6 +11,9 @@ const help = () => {
 
   Examples:
     npx openapi2aspida -i https://petstore.swagger.io/v2/swagger.json
+
+  documentPage:
+    https://github.com/aspida/openapi2aspida
 `
 }
 
